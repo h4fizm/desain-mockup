@@ -14,11 +14,18 @@
     <!-- Header -->
     <div class="bg-white text-black p-4">
       <div class="flex justify-between items-center">
-        <div class="font-extrabold text-2xl tracking-wide">Rental Car</div>
+        <!-- Logo -->
+        <a
+          href="index.html"
+          class="font-extrabold text-2xl tracking-wide hover:opacity-80 transition"
+        >
+          Rental Car
+        </a>
 
         <div class="flex items-center gap-3 relative">
-          <!-- Tombol Pesan -->
-          <button
+          <!-- Pesan Button -->
+          <a
+            href="daftar_mobil.html"
             class="flex items-center gap-2 bg-black text-white px-4 py-2 rounded-full text-sm shadow-md"
           >
             <svg
@@ -36,9 +43,9 @@
               />
             </svg>
             Pesan
-          </button>
+          </a>
 
-          <!-- Tombol Dropdown -->
+          <!-- Dropdown -->
           <div class="relative">
             <button
               id="dropdownButton"
@@ -63,10 +70,25 @@
             <!-- Dropdown Menu -->
             <div
               id="dropdownMenu"
-              class="absolute right-0 mt-2 w-36 bg-white border border-gray-200 rounded-lg shadow-lg hidden z-50"
+              class="absolute right-0 mt-2 w-40 bg-white border border-gray-200 rounded-lg shadow-lg hidden z-50"
             >
               <a
-                href="#"
+                href="index.html"
+                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                >Beranda</a
+              >
+              <a
+                href="daftar_mobil.html"
+                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                >Daftar Mobil</a
+              >
+              <a
+                href="riwayat.html"
+                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                >Riwayat</a
+              >
+              <a
+                href="profil.html"
                 class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                 >Profile</a
               >
@@ -89,6 +111,33 @@
       <p class="text-sm text-gray-500 leading-relaxed mt-1">
         Temukan mobil yang pas buat kebutuhanmu ✨
       </p>
+      <!-- Search Bar with Icon -->
+      <div class="mt-4 relative">
+        <span
+          class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
+        >
+          <svg
+            class="h-5 w-5 text-gray-400"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M21 21l-4.35-4.35M11 18a7 7 0 100-14 7 7 0 000 14z"
+            />
+          </svg>
+        </span>
+        <input
+          type="text"
+          name="search"
+          placeholder="Cari berdasarkan nama, status, atau tipe mobil..."
+          class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-black"
+        />
+      </div>
     </div>
 
     <!-- Filter Section -->
@@ -349,11 +398,11 @@
     <nav
       class="fixed bottom-0 left-0 right-0 bg-white bg-opacity-90 backdrop-blur text-black border-t border-gray-200 shadow-md flex justify-around py-2 z-50"
     >
+      <!-- Beranda (Aktif) -->
       <a
         href="index.html"
-        class="flex flex-col items-center text-xs font-semibold text-black"
+        class="flex flex-col items-center text-xs text-black hover:text-white hover:bg-black px-3 py-1 rounded-lg transition"
       >
-        <!-- Home Icon -->
         <svg
           class="w-6 h-6 mb-1"
           xmlns="http://www.w3.org/2000/svg"
@@ -371,11 +420,11 @@
         Beranda
       </a>
 
+      <!-- Daftar Mobil (Aktif) -->
       <a
         href="daftar_mobil.html"
-        class="flex flex-col items-center text-xs text-black"
+        class="flex flex-col items-center text-xs font-semibold text-white bg-black px-3 py-1 rounded-lg shadow transition"
       >
-        <!-- Car Icon -->
         <svg
           class="w-6 h-6 mb-1"
           xmlns="http://www.w3.org/2000/svg"
@@ -393,11 +442,11 @@
         Daftar Mobil
       </a>
 
+      <!-- Riwayat -->
       <a
         href="riwayat.html"
-        class="flex flex-col items-center text-xs text-black"
+        class="flex flex-col items-center text-xs text-black hover:text-white hover:bg-black px-3 py-1 rounded-lg transition"
       >
-        <!-- Clipboard List Icon -->
         <svg
           class="w-6 h-6 mb-1"
           xmlns="http://www.w3.org/2000/svg"
@@ -415,11 +464,11 @@
         Riwayat
       </a>
 
+      <!-- Profil -->
       <a
         href="profil.html"
-        class="flex flex-col items-center text-xs text-black"
+        class="flex flex-col items-center text-xs text-black hover:text-white hover:bg-black px-3 py-1 rounded-lg transition"
       >
-        <!-- User Icon -->
         <svg
           class="w-6 h-6 mb-1"
           xmlns="http://www.w3.org/2000/svg"

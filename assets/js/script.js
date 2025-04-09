@@ -18,3 +18,13 @@ const swiper = new Swiper(".swiper", {
   slidesPerView: "auto",
   spaceBetween: 16,
 });
+
+// show password form profil
+function togglePasswordVisibility() {
+  const passwordInput = document.getElementById("password");
+  const toggleBtn = document.getElementById("togglePassword");
+
+  const isPassword = passwordInput.type === "password";
+  passwordInput.type = isPassword ? "text" : "password";
+  toggleBtn.textContent = isPassword ? "Sembunyikan" : "Tampilkan";
+}
