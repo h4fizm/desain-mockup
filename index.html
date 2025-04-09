@@ -16,34 +16,76 @@
     <div class="bg-white text-black p-4">
       <div class="flex justify-between items-center">
         <div class="font-extrabold text-2xl tracking-wide">Rental Car</div>
-        <button
-          class="flex items-center gap-2 bg-black text-white px-4 py-2 rounded-full text-sm shadow-md"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-5 h-5"
+
+        <div class="flex items-center gap-3 relative">
+          <!-- Tombol Pesan -->
+          <button
+            class="flex items-center gap-2 bg-black text-white px-4 py-2 rounded-full text-sm shadow-md"
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M8.25 18.75a1.5 1.5 0 01-3 0m0 0a1.5 1.5 0 013 0m0 0h7.5m0 0a1.5 1.5 0 003 0m-3 0a1.5 1.5 0 013 0M4.5 18.75H3.375a.375.375 0 01-.375-.375V12.75a.75.75 0 01.75-.75h1.125m15 6.75h1.125a.375.375 0 00.375-.375V14.25a.75.75 0 00-.75-.75h-1.125M4.5 18.75v-9.75a.75.75 0 01.75-.75h13.5a.75.75 0 01.75.75v9.75"
-            />
-          </svg>
-          Pesan
-        </button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-5 h-5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M8.25 18.75a1.5 1.5 0 01-3 0m0 0a1.5 1.5 0 013 0m0 0h7.5m0 0a1.5 1.5 0 003 0m-3 0a1.5 1.5 0 013 0M4.5 18.75H3.375a.375.375 0 01-.375-.375V12.75a.75.75 0 01.75-.75h1.125m15 6.75h1.125a.375.375 0 00.375-.375V14.25a.75.75 0 00-.75-.75h-1.125M4.5 18.75v-9.75a.75.75 0 01.75-.75h13.5a.75.75 0 01.75.75v9.75"
+              />
+            </svg>
+            Pesan
+          </button>
+
+          <!-- Tombol Dropdown -->
+          <div class="relative">
+            <button
+              id="dropdownButton"
+              class="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-5 h-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 12h14M5 6h14M5 18h14"
+                />
+              </svg>
+            </button>
+
+            <!-- Dropdown Menu -->
+            <div
+              id="dropdownMenu"
+              class="absolute right-0 mt-2 w-36 bg-white border border-gray-200 rounded-lg shadow-lg hidden z-50"
+            >
+              <a
+                href="#"
+                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                >Profile</a
+              >
+              <a
+                href="#"
+                class="block px-4 py-2 text-sm text-red-600 hover:bg-gray-100"
+                >Logout</a
+              >
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
     <!-- Greeting -->
     <div class="px-4 mt-2">
       <h2 class="text-xl font-semibold">👋 Hai, Admin</h2>
-      <p class="text-sm text-gray-500 leading-relaxed">
-        Selamat datang kembali 😊💕
-      </p>
+      <p class="text-sm text-gray-500 leading-relaxed">Selamat datang 😊💕</p>
     </div>
 
     <!-- Latest/Current Status -->
@@ -56,62 +98,36 @@
           </p>
 
           <!-- Card Status -->
-          <div
-            class="bg-white border border-gray-200 rounded-xl p-4 shadow-sm flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3"
-          >
-            <!-- Keterangan Mobil -->
-            <div class="flex items-start sm:items-center gap-3">
+          <div class="bg-white border border-gray-200 rounded-xl p-4 shadow-sm">
+            <div class="flex items-start gap-3">
               <!-- Ikon Mobil -->
               <img
                 src="assets/image/sedan.png"
                 alt="Sedan"
-                class="mx-auto mb-2 w-8 h-8 object-contain"
+                class="w-8 h-8 object-contain mt-1"
               />
-              <!-- Detail -->
-              <div>
-                <p class="text-sm font-semibold text-black">
-                  Honda Civic Type-R - Sedan
-                </p>
-                <p class="text-xs text-gray-500">
-                  08 Apr 2025, 09:00 - 10 Apr 2025, 20:00
-                </p>
+
+              <!-- Kontainer Fleksibel untuk Teks dan Badge -->
+              <div class="flex-1">
+                <!-- Detail Mobil -->
+                <div>
+                  <p class="text-sm font-semibold text-black">
+                    Honda Civic Type-R - Sedan
+                  </p>
+                  <p class="text-xs text-gray-500">
+                    08 Apr 2025, 09:00 - 10 Apr 2025, 20:00
+                  </p>
+                </div>
+
+                <!-- Status (diletakkan di bawah tanggal) -->
+                <div class="flex items-center gap-2 mt-2">
+                  <span
+                    class="bg-red-100 text-red-700 px-4 py-1 rounded-full text-xs font-medium"
+                  >
+                    Tidak Disetujui
+                  </span>
+                </div>
               </div>
-            </div>
-
-            <!-- Status -->
-            <div class="flex items-center gap-2 sm:mt-1 px-4">
-              <!-- Icon status disesuaikan dengan pilihan kategori -->
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="w-4 h-4 text-yellow-500"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M12 8v4l3 3"
-                />
-              </svg>
-
-              <!-- Badge -->
-              <!-- <span
-                class="bg-green-100 text-green-700 px-4 py-1 rounded-full text-xs font-medium"
-              >
-                Disetujui
-              </span> -->
-              <!-- <span
-                class="bg-yellow-100 text-yellow-700 px-4 py-1 rounded-full text-xs font-medium"
-              >
-                Pending
-              </span> -->
-              <span
-                class="bg-red-100 text-red-700 px-4 py-1 rounded-full text-xs font-medium"
-              >
-                Tidak Disetujui
-              </span>
             </div>
           </div>
         </div>
