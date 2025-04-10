@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Profil Pengguna</title>
+    <!-- Favicon -->
+    <link rel="icon" href="assets/image/favicon.png" type="image/x-icon" />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="bg-white text-black font-sans">
@@ -100,34 +102,50 @@
     </div>
 
     <!-- Profil Card -->
-    <section class="px-4 py-6 text-center">
+    <section class="px-4 py-6">
       <div
-        class="w-24 h-24 mx-auto rounded-full overflow-hidden border-4 border-black"
+        class="bg-gray-100 rounded-2xl p-4 flex items-center gap-4 shadow-md"
       >
-        <img
-          src="https://i.pravatar.cc/100"
-          alt="Avatar"
-          class="w-full h-full object-cover"
-        />
-      </div>
-      <h2 class="text-xl font-semibold mt-4">Admin</h2>
+        <!-- Foto Profil -->
+        <div class="flex flex-col items-center">
+          <!-- Foto Profil -->
+          <div
+            class="w-20 h-20 rounded-full overflow-hidden border-4 border-black"
+          >
+            <img
+              src="https://i.pravatar.cc/100"
+              alt="Avatar"
+              class="w-full h-full object-cover"
+              id="profilePreview"
+            />
+          </div>
 
-      <!-- Role Badge -->
-      <span
-        class="inline-block mt-1 bg-black text-white text-xs font-medium px-3 py-1 rounded-full shadow-sm"
-      >
-        Admin
-      </span>
-      <!-- <span
-        class="inline-block mt-1 bg-black text-white text-xs font-medium px-3 py-1 rounded-full shadow-sm"
-      >
-        User
-      </span>
-      <span
-        class="inline-block mt-1 bg-black text-white text-xs font-medium px-3 py-1 rounded-full shadow-sm"
-      >
-        Operator
-      </span> -->
+          <!-- Teks Edit Foto -->
+          <label
+            for="uploadPhoto"
+            class="mt-2 text-sm text-blue-600 font-medium cursor-pointer hover:underline"
+          >
+            Edit Foto
+          </label>
+          <input
+            type="file"
+            id="uploadPhoto"
+            accept="image/*"
+            class="hidden"
+            onchange="previewPhoto(event)"
+          />
+        </div>
+
+        <!-- Nama dan Role -->
+        <div>
+          <h2 class="text-xl font-bold text-black">Farel</h2>
+          <span
+            class="inline-block mt-1 bg-black text-white text-xs font-semibold px-3 py-1 rounded-full"
+          >
+            Admin
+          </span>
+        </div>
+      </div>
     </section>
 
     <!-- Info Section: Form Profil -->

@@ -19,6 +19,20 @@ const swiper = new Swiper(".swiper", {
   spaceBetween: 16,
 });
 
+// upload photo
+function previewPhoto(event) {
+  const file = event.target.files[0];
+  const reader = new FileReader();
+
+  reader.onload = function (e) {
+    document.getElementById("profilePreview").src = e.target.result;
+  };
+
+  if (file) {
+    reader.readAsDataURL(file);
+  }
+}
+
 // show password form profil
 function togglePasswordVisibility() {
   const passwordInput = document.getElementById("password");
